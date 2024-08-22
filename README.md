@@ -1,6 +1,6 @@
 # Roborovsky Note
 
-<img src=".images/roborovsky_logo.png" width="200" />
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/.images/roborovsky_logo.png?raw=true" width="200" />
 
 ## 自己紹介
 Roborovsky（ロボロフスキー）は趣味プログラミングを楽しむために結成されたチームです。ハムスター好きとマイクロマウス好きの２人で構成されます。
