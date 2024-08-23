@@ -11,6 +11,7 @@
 - 評価環境への外部パッケージインストール
 - 経路最適化
 - WP生成GUI
+- 加速度だけ使われる件
 - 環境構築、開発効率化関連
 - MultiPurposeMPC
 - BoostCommander
