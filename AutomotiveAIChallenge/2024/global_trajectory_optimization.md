@@ -1,8 +1,8 @@
-# global_trajectory_optimization による最短時間経路の生成
+# 走行軌道の最適化ツールを自動運転AIチャレンジ2024コースに適用
 
 ## 本記事の要点
 
-* 最適経路生成ツールである [global_trajectory_optimization](https://github.com/TUMFTM/global_racetrajectory_optimization) を自動運転AIチャレンジ 2024 のコースに適用する方法を紹介する
+* 最適な走行軌道を生成するツール "[global_trajectory_optimization](https://github.com/TUMFTM/global_racetrajectory_optimization)" を自動運転AIチャレンジ 2024 のコースに適用する方法を紹介する
 * 適用したソースコードは [こちら](https://github.com/Roborovsky-Racers/global_racetrajectory_optimization/tree/master) に公開中
 
 ## はじめに
@@ -26,7 +26,7 @@
 
 ## 環境構築
 
-[global_trajectory_optimization](https://github.com/TUMFTM/global_racetrajectory_optimization) の最終更新はやや古く、オリジナルの requirments.txt に従っても動作しない可能性があります。
+[global_trajectory_optimization 本家](https://github.com/TUMFTM/global_racetrajectory_optimization) の最終更新はやや古く、 requirments.txt に従っても動作しない可能性があります。
 そこで、適切なバージョンの Python パッケージをインストールするためのスクリプトを [こちら](https://github.com/Roborovsky-Racers/global_racetrajectory_optimization/blob/master/setup_env.bash) を用意しました。少なくとも自動運転AIチャレンジ 2024 の Docker 環境においては正しく機能することを確認しています。
 
 
