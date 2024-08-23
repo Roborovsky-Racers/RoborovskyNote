@@ -12,8 +12,10 @@ title: Roborovsky Note
 
 
 ## 開発記録
+
 - [軌道最適化ツールを自動運転AIチャレンジ2024のコースに適用](global_trajectory_optimization.md)
-- 評価環境への外部パッケージインストール
+- [予選のノード構成](preliminary_round_architecture.md)
+- [評価環境へのPythonパッケージインストール方法](install_python_pkgs.md)
 - 経路最適化
 - WP生成GUI
 - 加速度だけ使われる件
