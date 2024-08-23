@@ -1,4 +1,4 @@
-# Roborovsky
+# Roborovsky Note
 
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/.images/roborovsky_logo.png?raw=true" width="200" />
 
