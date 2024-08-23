@@ -16,4 +16,6 @@ Roborovsky（ロボロフスキー）は趣味プログラミングを楽しむ�
 - [自動運転AIチャレンジ 2024年](/AutomotiveAIChallenge/2024/index.md)
 
 ---
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/.images/roborovsky_logo.png?raw=true" width="75" />
+
 [Roborovsky Note トップページ](https://roborovsky-racers.github.io/RoborovskyNote/)
