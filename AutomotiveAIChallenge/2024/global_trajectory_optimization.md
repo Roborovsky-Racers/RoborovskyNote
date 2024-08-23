@@ -19,9 +19,11 @@ title: test
 * 最小曲率（mincurv）
 
 最短時間軌道の場合
+
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/global_trajectory_optimization/mintime.png?raw=true" width="400px"/>
 
 最短距離軌道の場合
+
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/global_trajectory_optimization/shortest.png?raw=true" width="400px" />
 
 なお、最適指標の比較に関するの詳しい内容については [M.Eguchiさんによるこちらの記事](https://zenn.dev/tamago117/articles/b021d2fcb875cc) が詳しいです。
