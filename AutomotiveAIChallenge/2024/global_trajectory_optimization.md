@@ -2,7 +2,7 @@
 title: Roborovsky Note
 ---
 
-# 走行軌道の最適化ツールを自動運転AIチャレンジ2024のコースに適用
+# 軌道最適化ツールを自動運転AIチャレンジ2024のコースに適用
 
 ## 本記事の要点
 
@@ -64,6 +64,11 @@ python3 main_globaltraj.py
 
 ## 最後に
 [global_trajectory_optimization](https://github.com/TUMFTM/global_racetrajectory_optimization) を自動運転AIチャレンジ 2024 の環境で実行できるようにするまでにいくつかハードルがあったため記事にしてみました。参考になれば幸いです。
+
+また、先人達の解説記事にも感謝申し上げます。
+* [M.Eguchiさんの記事](https://zenn.dev/tamago117/articles/b021d2fcb875cc)
+* [toki-1441さんの記事](https://qiita.com/toki-1441/items/615d781e3a20edf22cda)
+
 
 
 ---
