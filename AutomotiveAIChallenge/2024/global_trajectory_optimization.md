@@ -1,5 +1,5 @@
 ---
-title: test
+title: Roborovsky Note
 ---
 
 # 走行軌道の最適化ツールを自動運転AIチャレンジ2024コースに適用
@@ -64,3 +64,7 @@ python3 main_globaltraj.py
 
 ## 最後に
 [global_trajectory_optimization](https://github.com/TUMFTM/global_racetrajectory_optimization) を自動運転AIチャレンジ 2024 の環境で実行できるようにするまでにいくつかハードルがあったため記事にしてみました。参考になれば幸いです。
+
+
+---
+[Roborovsky Note トップページ](https://roborovsky-racers.github.io/RoborovskyNote/)

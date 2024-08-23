@@ -1,3 +1,7 @@
+---
+title: Roborovsky Note
+---
+
 # 自動運転AIチャレンジ 2024
 
 2024年7月から11月にかけて開催された、EVレーシングカートの自動運転競技会に参加しました。
@@ -21,3 +25,7 @@
 
 ## 関連サイト
 - [Advent Calendar](https://qiita.com/advent-calendar/2023/jidounten-ai)
+
+
+---
+[Roborovsky Note トップページ](https://roborovsky-racers.github.io/RoborovskyNote/)

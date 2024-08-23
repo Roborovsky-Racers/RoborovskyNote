@@ -1,3 +1,7 @@
+---
+title: Roborovsky Note
+---
+
 # Roborovsky Note
 
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/.images/roborovsky_logo.png?raw=true" width="200" />
@@ -10,3 +14,6 @@ Roborovsky（ロボロフスキー）は趣味プログラミングを楽しむ�
 
 ## 活動記録
 - [自動運転AIチャレンジ 2024年](/AutomotiveAIChallenge/2024/index.md)
+
+---
+[Roborovsky Note トップページ](https://roborovsky-racers.github.io/RoborovskyNote/)
