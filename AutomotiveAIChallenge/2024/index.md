@@ -8,7 +8,7 @@
 
 
 ## 開発記録
-- [走行軌道の最適化ツールを自動運転AIチャレンジ2024コースに適用](/AutomotiveAIChallenge/2024/index.md)
+- [走行軌道の最適化ツールを自動運転AIチャレンジ2024コースに適用](global_trajectory_optimization.md)
 - 評価環境への外部パッケージインストール
 - 経路最適化
 - WP生成GUI
