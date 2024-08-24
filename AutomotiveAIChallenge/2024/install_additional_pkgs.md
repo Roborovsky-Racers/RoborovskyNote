@@ -12,6 +12,7 @@ AIチャレンジ2024予選では、各チームが作成したソースコー�
 これらの手順は自動化されており、かつ公式が管理するリポジトリの[Dockerfile](https://github.com/AutomotiveAIChallenge/aichallenge-2024/blob/main/Dockerfile)が使用されるようになっているため、参加者側がDockerイメージに手を加えることはできません。
 
 本件について、大会公式Slackで弊チームから質問したところ、以下のような回答を得ました。
+
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/install_additional_library/slack_qa_pip_install.png?raw=true" width="600px" />
 
 運営側に依頼することでDockerイメージにパッケージを追加していただくことも不可能ではないようですが、検討に時間がかかるようであり、また全ての参加者の要望を聞くことは難しいと思われるため、予選の短い期間内ではあまり現実的ではないと感じました。
@@ -43,6 +44,7 @@ ROSパッケージ開発を行う上で最もスタンダードな方法です�
 この方法であればオンライン環境でのDockerイメージビルド時に追加でインストール作業が必要ありません。
 
 公式Slackで質問した際にも回答の一つでご提案いただきました（@Manotec_真野(代表)様 ありがとうございます！）
+
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/install_additional_library/slack_qa_pip_install2.png?raw=true" width="600px" />
 
 ただ、外部依存パッケージが少数であったり構成がシンプルであればこの方法も十分実用的なのですが、外部依存がさらに別の依存を持っていたり規模が大きくなってくると、ビルド手順が非常に複雑になる場合も多く管理も面倒となってくるため、できれば避けたい方法です。
