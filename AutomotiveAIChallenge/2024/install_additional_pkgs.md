@@ -49,11 +49,11 @@ ROSパッケージ開発を行う上で最もスタンダードな方法です�
 
 ただ、外部依存パッケージが少数であったり構成がシンプルであればこの方法も十分実用的なのですが、外部依存がさらに別の依存を持っていたり規模が大きくなってくると、ビルド手順が非常に複雑になる場合も多く管理も面倒となってくるため、できれば避けたい方法です。
 
-### 3. CMakelists.txt に記述した execute_process を利用する方法
+### 3. CMakeLists.txt に記述した execute_process を利用する方法
 
 我々のチームが採用した方法です。
 
-各パッケージの `CMakelists.txt` に `execute_process` を記述しておくことで、ビルド時にある程度任意のコマンドを実行させることが可能です。
+各パッケージの `CMakeLists.txt` に `execute_process` を記述しておくことで、ビルド時にある程度任意のコマンドを実行させることが可能です。
 
 オンライン環境のDockerfileでは、[この部分](https://github.com/AutomotiveAIChallenge/aichallenge-2024/blob/v2024.7.19.0/Dockerfile#L42) の `colcon build` のタイミングで `execute_process` を実行させることができます。
 
@@ -65,7 +65,7 @@ ROSパッケージ開発を行う上で最もスタンダードな方法です�
 
 ## 具体的なインストール方法の紹介
 
-我々のチームが作成したROS 2パッケージで使用している `CMakelists.txt` の具体的な記述例を以下に示します。
+我々のチームが作成したROS 2パッケージで使用している `CMakeLists.txt` の具体的な記述例を以下に示します。
 
 ```cmake
 cmake_minimum_required(VERSION 3.5.0)
