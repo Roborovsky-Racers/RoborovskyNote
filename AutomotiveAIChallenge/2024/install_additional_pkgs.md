@@ -59,7 +59,7 @@ ROSパッケージ開発を行う上で最もスタンダードな方法です�
 
 我々はこの方法で `pip install` を実行させて追加の外部依存パッケージをインストールしています。
 
-ただし、インストールパッケージによっては、標準環境にインストールされているパッケージと競合し、Autoware の実行環境を破壊してしまう場合もあるため、`virtualenv` を
+ただし、インストールパッケージによっては、標準環境にインストールされているパッケージと競合し、Autoware の実行環境を破壊してしまう場合もあるため、venv を
 
 作成した上で `pip install` を行う方法を取りました。
 
@@ -76,23 +76,23 @@ find_package(ament_cmake_auto REQUIRED)
 
 (中略)
 
-# create python virtual environment
+# create python venv
 execute_process(
   COMMAND /usr/bin/python3 -m venv ${CMAKE_INSTALL_PREFIX}/.venv
   RESULT_VARIABLE venv_result
 )
 if(venv_result)
-    message(FATAL_ERROR "Failed to create virtual environment")
+    message(FATAL_ERROR "Failed to create venv")
 endif()
 
-# install python dependencies in virtual environment
+# install python dependencies in venv
 execute_process(
     COMMAND ${CMAKE_INSTALL_PREFIX}/.venv/bin/pip install -r ./resources/requirements.txt
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     RESULT_VARIABLE install_result
 )
 if(install_result)
-    message(FATAL_ERROR "Failed to install python dependencies in virtual environment")
+    message(FATAL_ERROR "Failed to install python dependencies in venv")
 endif()
 
 ament_auto_package()
@@ -100,35 +100,35 @@ ament_auto_package()
 
 ここでは大きく分けて以下の2つの `execute_process` コマンドを記述しました。
 
-### 1. `virtualenv` を構築
+### 1. venv を構築
 
 以下が対応部分です。
 ```cmake
-# create python virtual environment
+# create python venv
 execute_process(
   COMMAND /usr/bin/python3 -m venv ${CMAKE_INSTALL_PREFIX}/.venv
   RESULT_VARIABLE venv_result
 )
 if(venv_result)
-    message(FATAL_ERROR "Failed to create virtual environment")
+    message(FATAL_ERROR "Failed to create venv")
 endif()
 ```
 
 venv の作成先として指定している `${CMAKE_INSTALL_PREFIX}/.venv` は、 `/path/to/colcon_ws/install/package_name/.venv` を指しています。
 また、 `RESULT_VARIABLE` を用いて venv が正常に作成できたかどうかをチェックしています。
 
-### 2. 構築した `virtualenv` に `pip install` で外部依存パッケージをインストール
+### 2. 構築した venv に `pip install` で外部依存パッケージをインストール
 
 以下が対応部分です。
 ```cmake
-# install python dependencies in virtual environment
+# install python dependencies in venv
 execute_process(
     COMMAND ${CMAKE_INSTALL_PREFIX}/.venv/bin/pip install -r ./resources/requirements.txt
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     RESULT_VARIABLE install_result
 )
 if(install_result)
-    message(FATAL_ERROR "Failed to install python dependencies in virtual environment")
+    message(FATAL_ERROR "Failed to install python dependencies in venv")
 endif()
 ```
 
