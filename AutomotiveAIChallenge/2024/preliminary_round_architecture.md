@@ -49,10 +49,6 @@ AIチャレンジ 2024 の予選シミュレーションでは、AWSIM側で速�
 ### 速度制限の突破はルール上許されるか？
 速度制限の突破は、予選においては許容されるものと認識しています。その根拠は、大会公式Slack にて運営の方より、30km/h を超える速度が出ている提出を許容する旨が書き込まれた点にあります。
 
-大会公式Slack #question_質問 8/8の書き込み（出典：https://jsae-aichallenge.slack.com/archives/C05CJ9BJ96Y/p1723126524542129）
-<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/preliminary_round_architecture/slack_qa_acc_boost.png?raw=true" width="600" />
-
-
 運営の皆様は 30km/h 突破を想定されていなかったものと推察しますが、30km/h を超えるチームが複数出てきてしまった以上、提出履歴をチェック・修正してリセットすることは困難と判断されたものと思われます。
 
 とはいえ 2024/08/24 現在、速度制限を突破しているのは一部のチームに限られます。
