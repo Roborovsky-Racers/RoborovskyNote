@@ -157,7 +157,9 @@ if __name__ == "__main__":
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/enhance_dev_makefile/initialpose_pub1.gif" width="600px" />
 
 そこで模索していたところ、同じメッセージを複数回投げることで、以下のgifのように推定値がより速くスタート地点に収束することを発見したため、最終的には同じメッセージを５回 publish するようにしました。
-<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/enhance_dev_makefile/initialpose_pub5.gif" width="600px" />
+<img src="https://raw.githubusercontent.com/Roborovsky-Racers/RoborovskyNote/main/AutomotiveAIChallenge/2024/.images/enhance_dev_makefile/initialpose_pub5.gif" width="600px" />
+
+![](https://raw.githubusercontent.com/Roborovsky-Racers/RoborovskyNote/main/AutomotiveAIChallenge/2024/.images/enhance_dev_makefile/initialpose_pub5.gif)
 
 
 ここまで説明したリセット処理を `make reset` コマンドで実行できるように[Makefileに記述](https://github.com/Roborovsky-Racers/aichallenge-2024/blob/89616b9a868185fd2018cf6cf8efa7dbe8970e7b/aichallenge/Makefile#L26-L29)しました。
