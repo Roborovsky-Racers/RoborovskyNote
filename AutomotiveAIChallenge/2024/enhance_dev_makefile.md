@@ -79,7 +79,8 @@ AWSIMのリセット機能によりシミュレータ上の車両位置をスタ
 ただ、これだけだとAutoware側の自己位置推定器(`/localization/ekf_localizer`ノード)については状態がリセットされませんでした。
 ですが、GNSSの値などから推定を徐々に修正してくれるようで、以下のgifのようにしばらく待っていると推定値がスタート地点に収束してくれます。
 
-<img src=".images/docker/initialpose_reset.gif" width="600px" />
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/enhance_dev_makefile/initialpose_reset.gif" width="600px" />
+
 
 そのため推定が収束するまで待っていれば良いのですが、リセット前の車両位置がスタート地点からそれなりに離れている場合（特に姿勢変位がスタート姿勢より大きめだと）、`ekf_localizer`が出力する自己位置がスタート地点に戻ってくるまで数秒〜十数秒程度かかる場合がありました。
 プランナーが自己位置推定結果を使用する場合は、自己位置が収束するまで走行の再開を待たなければならず、これも手返しに関わるためなにか方法がないか調べました。
@@ -153,10 +154,10 @@ if __name__ == "__main__":
 `covariance` の値が初期値の0や小さすぎる値であると、`ekf_localizer`の推定結果の収束が悪かったため、こちらの値を使うのが良さそうでした。
 
 ただ、初期位置設定のメッセージを１回publishするだけだと、以下のgifのように自己位置推定値のスタート地点への収束にまだ少し時間がかかっていました。
-<img src=".images/docker/initialpose_pub1.gif" width="600px" />
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/enhance_dev_makefile/initialpose_pub1.gif" width="600px" />
 
 そこで模索していたところ、同じメッセージを複数回投げることで、以下のgifのように推定値がより速くスタート地点に収束することを発見したため、最終的には同じメッセージを５回 publish するようにしました。
-<img src=".images/docker/initialpose_pub5.gif" width="600px" />
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/enhance_dev_makefile/initialpose_pub5.gif" width="600px" />
 
 
 ここまで説明したリセット処理を `make reset` コマンドで実行できるように[Makefileに記述](https://github.com/Roborovsky-Racers/aichallenge-2024/blob/89616b9a868185fd2018cf6cf8efa7dbe8970e7b/aichallenge/Makefile#L26-L29)しました。
