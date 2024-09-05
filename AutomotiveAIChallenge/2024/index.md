@@ -18,6 +18,7 @@ title: Roborovsky Note
 - [lanelet2 を Occupancy Grid Map 形式に変換する](lanelet2_to_ogm.md)
 - [予選大会におけるソフトウェア構成と30km/s速度制限を突破する方法](preliminary_round_architecture.md)
 - [予選大会における開発効率化方法の紹介 - Makefile編](enhance_dev_makefile.md)
+- [予選大会におけるラップタイム短縮の工夫](awsim_kart_speed_opt_tips.md)
 <!-- - 経路最適化 -->
 <!-- - WP生成GUI -->
 <!-- - 加速度だけ使われる件 -->
