@@ -51,7 +51,7 @@ AIチャレンジ 2024 予選大会で上位に入賞するにはブースト加
 そこで、我々のチームでは下図のようなノード構成を取りました。
 boost_commander は mpc_controller の車両コマンドを受け取り、そのまま車両に指令します。ただし ``boost_mode`` の ``true/false`` に応じて指令レートを 1500Hz/50Hz で切り替えます。
 
-<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/awsim_kart_speed_opt_tips/boost_commander.png?raw=true" width="800px"/>
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/awsim_kart_speed_opt_tips/boost_commander.png?raw=true" width="600px"/>
 
 本来、 mpc_controller の制御レートはたかだか 40 Hz ですが、この方式によって車両のコマンドレートを飛躍的に高めることができ、任意のタイミングでブースト加速の発生確率を引き上げることができます。
 
