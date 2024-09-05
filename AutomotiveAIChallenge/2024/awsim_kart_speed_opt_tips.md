@@ -14,7 +14,7 @@ title: Roborovsky Note
 - ブースト加速のハンドリング
 - 経路は曲率を最小化
 - ブレーキ戦略
-- 評価環境に合わせた根性のパラチュン
+- 評価環境に合わせた根性のパラメータ調整
 
 ## 前提：予選のソフトウェア構成
 
@@ -30,7 +30,7 @@ title: Roborovsky Note
 
 車両のコントローラのベースとして [Multi-Purpose-MPC](https://github.com/matssteinweg/Multi-Purpose-MPC) を用いたことにより障害物をスムーズに回避することができました。急ハンドルが抑制できるため高い走行速度を維持することができ、ラップタイムの短縮に繋がりました。
 
-詳細は [こちらの記事](NotImplementedError.md) をご覧ください。
+<!-- 詳細は [こちらの記事](NotImplementedError.md) をご覧ください。 -->
 
 
 ## ブースト加速のハンドリング
@@ -73,18 +73,32 @@ boost_commander は mpc_controller の車両コマンドを受け取り、その
 
 ブースト加速を多用しつつラップタイムを短縮するには
 
-* いつブース加速を無効化するか
+* いつブースト加速を無効化するか
 * いつブレーキをかけるか
 
-が重要でした。常にブースト加速をしていてはすぐに横転してしまいますし、頻繁にブレーキをかけていては遅くなってしまいます。
+が重要でした。常にブースト加速していてはすぐに横転してしまいますし、頻繁にブレーキをかけていてはは遅くなってしまいます。
 
 そこで、下図のような戦略でブースト加速のON/OFFやブレーキタイミングを切り替えました。
 
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/awsim_kart_speed_opt_tips/brake.png?raw=true" width="400px"/>
 
+実際に走行している様子がこちらです。MPCの予測ホライズンの色が下記に相当します。
+- 青: ブースト加速 ON
+- 黃: ブースト加速 OFF
+- 赤: ブレーキ
+
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/awsim_kart_speed_opt_tips/brake_strategy.gif?raw=true" width="400px" />
+
+## 評価環境に合わせた根性のパラメータ調整
+
+最後はパラメータ調整が物を言います。
+何度も提出と調整を繰り返して頑張りました。特に [Multi-Purpose-MPC](https://github.com/matssteinweg/Multi-Purpose-MPC) を使用する場合、評価環境では制御レートがあまり出ず、低い制御レートに合わせたパラメータ調整や計算量の削減などに苦心しました。（時間的余裕があればC++移植したかったですが間に合いませんでした。）
 
 ## 最後に
 
-
+本記事では、我々のチームがラップタイム短縮のために実施した工夫ポイントを紹介しました。
+ひとつひとつは小さな工夫ですが、少しずつタイムが縮んでいくのは達成感がありました。
+実機を用いる決勝大会に対しては適用が難しい工夫も多いですが、予選に出場した皆様に苦労した点を共感いただけたら嬉しいです。
 
 ---
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/.images/roborovsky_logo.png?raw=true" width="75" />
