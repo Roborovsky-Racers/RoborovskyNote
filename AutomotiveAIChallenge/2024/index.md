@@ -27,7 +27,8 @@ title: Roborovsky Note
 
 
 ## 関連サイト
-- [Advent Calendar](https://qiita.com/advent-calendar/2023/jidounten-ai)
+- [自動運転AIチャレンジ 2024 公式ページ](https://www.jsae.or.jp/jaaic/2024ver)
+- [自動運転AIチャレンジ Advent Calendar](https://qiita.com/advent-calendar/2023/jidounten-ai)
 
 
 ---
