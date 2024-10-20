@@ -16,10 +16,11 @@ Google Drive にて公開します。
 
 rosbag の説明
 - 車両ID
-  - `ECU-RK-08`
+  - A8, `ECU-RK-08`
 - 総ファイル数
-  - 12 ファイル
-  - `vehicle/status/control_mode` が `AUTONOMOUS` の期間のみを抽出し、計 12 のファイルに分割してある
+  - 11 ファイル
+  - ※ インデックス 1~12 まであるが、インデックス 8 は無効なデータのため除外してある
+- `vehicle/status/control_mode` が `AUTONOMOUS` の期間のみを抽出し、計 11 のファイルに分割してある
 
 ## さいごに
 実機による走行では様々な要因によって rosbag の取得が困難であったケースもあるかと思います。
