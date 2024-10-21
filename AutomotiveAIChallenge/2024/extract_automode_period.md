@@ -13,6 +13,7 @@ title: Roborovsky Note
 本スクリプトは `vehicle/status/control_mode` トピックを監視し、 値が `AUTONOMOUS`であるの期間の始点と終点を抽出して `auto_period.csv` に出力します。
 
 auto_period.csv
+
 |start|end|
 |---|---|
 |t_start_1|t_end_1|
