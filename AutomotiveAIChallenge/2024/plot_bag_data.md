@@ -39,12 +39,12 @@ options:
 
 実行例:
 ```bash
-$ ros2 run aic_tools analyze_bag.bash /logs/20241011_training/rosbag_trim/rosbag2_2024_10_11-18_03_34_trim_1/ 
+$ ros2 run aic_tools analyze_bag.bash /logs/20241011_training/rosbag_trim/rosbag2_2024_10_11-18_03_34_trim_1/
 ```
 
 実行すると、以下の画像のように、走行時のekfによる自己位置推定結果(`/localization/kinematic_state`)とGNSSの取得データ(`/sensing/gnss/pose`)のプロットと専有格子地図が重ねて表示されます。
 
-<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/plot_bag_data/plot_example.png?raw=true" width="600px" />
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/plot_bag_data/plot_example.png?raw=true" width="700px" />
 <!-- <img src=".images/plot_bag_data/plot_example.png?raw=true" width="600px" /> -->
 
 ### スクリプト処理の流れ
@@ -73,12 +73,12 @@ class ImuDataHandler(TopicHandler):
         return {"gyro_z": msg.angular_velocity.z}
 ```
 
-`extract_data`関数の引数である`msg` にはtopicのメッセージ型でデータが渡されてくるようになっているので、各メッセージ定義を調べて必要なメンバ（全てのメンバを列挙する必要はありません）をdict型でreturnするようにしてください。
+`extract_data` 関数の引数である `msg` にはtopicのメッセージ型でデータが渡されてくるようになっているので、各メッセージ定義を調べて必要なメンバ（全てのメンバを列挙する必要はありません）をdict型でreturnするようにしてください。
 ここでdictのkeyとして設定した名称で、データがdataframeに登録されます。
 なお、timestampは自動的に含まれるようになっているので、ここで明示的に記述する必要はありません。
 
-#### 作成したHandlerクラスを`TARGET_HANDLERS`に追加する
-[analyze_bag.py の `TARGET_HANDLER`定義](https://github.com/Roborovsky-Racers/aic_tools/blob/9b465278df674b3de2cfba9dbbe54ced9948550b/scripts/analyze_bag.py#L76-L82) に先程実装したHandlerクラスを追加します。この時、importの記述も必要となります。
+#### 作成したHandlerクラスを `TARGET_HANDLERS` に追加する
+[analyze_bag.py の `TARGET_HANDLER` 定義](https://github.com/Roborovsky-Racers/aic_tools/blob/9b465278df674b3de2cfba9dbbe54ced9948550b/scripts/analyze_bag.py#L76-L82) に先程実装したHandlerクラスを追加します。この時、importの記述も必要となります。
 
 ```
 from aic_tools.topic_handler import (
@@ -105,7 +105,7 @@ from aic_tools.topic_handler import (
     plt.show()
 ```
 
-<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/plot_bag_data/plot_example2.png?raw=true" width="300px" />
+<img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/plot_bag_data/plot_example2.png?raw=true" width="450px" />
 <!-- <img src=".images/plot_bag_data/plot_example2.png?raw=true" width="300px" /> -->
 
 

@@ -23,7 +23,7 @@ auto_period.csv
 
 ### 実行手順
 1. リポジトリ aic_tools をクローン＆ビルド
-1. `ros2 run aic_tools auto_mode_period_marker.py`　を実行
+1. `ros2 run aic_tools auto_mode_period_marker.py` を実行
 1. 抽出対象の rosbag を play (`ros2 bag play BAG_FILE_NAME` など)
 1. rosbag の再生が完了したら auto_mode_period_marker を Ctrl+c で終了
 1. 最終的な出力：auto_period.csv が `ros2 run`の実行ディレクトリに保存される
