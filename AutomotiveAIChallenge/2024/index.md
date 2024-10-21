@@ -20,7 +20,7 @@ title: Roborovsky Note
 - [予選大会における開発効率化方法の紹介 - Makefile編](enhance_dev_makefile.md)
 - [予選大会におけるラップタイム短縮の工夫](awsim_kart_speed_opt_tips.md)
 - [事前練習日(2024/10/11)の rosbag を公開](share_practice_rosbag.md)
-- [rosbag から自動走行モードの期間を抽出するスクリプト](share_practice_rosbag.md)
+- [rosbag から自動走行モードの期間を抽出するスクリプト](extract_automode_period.md)
 - [rosbag のデータをプロットするスクリプト](plot_bag_data.md)
 
 
