@@ -43,6 +43,7 @@ $ ros2 run aic_tools analyze_bag.bash /logs/20241011_training/rosbag_trim/rosbag
 ```
 
 実行すると、以下の画像のように、走行時のekfによる自己位置推定結果(`/localization/kinematic_state`)とGNSSの取得データ(`/sensing/gnss/pose`)のプロットと専有格子地図が重ねて表示されます。
+青色の数値は走行速度を表しています(`/vehicle/status/velocity_status` の longitudinal_velocity)。
 
 <img src="https://github.com/Roborovsky-Racers/RoborovskyNote/blob/main/AutomotiveAIChallenge/2024/.images/plot_bag_data/plot_example.png?raw=true" width="700px" />
 <!-- <img src=".images/plot_bag_data/plot_example.png?raw=true" width="600px" /> -->
