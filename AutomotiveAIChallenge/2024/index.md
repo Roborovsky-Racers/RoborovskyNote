@@ -5,9 +5,10 @@ title: Roborovsky Note
 # 自動運転AIチャレンジ 2024
 
 自動運転AIチャレンジ 2024 は 2024 年 7 月から 11 月にかけて開催された、ゴーカートによる自動運転のカーレースです。
+
 [シティーサーキット東京ベイ](https://city-circuit.com/)のサーキットにてタイムアタックで競い合います。
 
-[自動運転AIチャレンジ 2024 公式ページ](https://www.jsae.or.jp/jaaic/2024ver)
+- [自動運転AIチャレンジ 2024 公式ページ](https://www.jsae.or.jp/jaaic/2024ver)
 
 ## 成績
 
